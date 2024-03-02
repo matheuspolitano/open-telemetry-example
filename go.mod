@@ -6,6 +6,8 @@ require (
 	github.com/fsnotify/fsnotify v1.7.0 // indirect
 	github.com/google/logger v1.1.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
+	github.com/jmoiron/sqlx v1.3.5 // indirect
+	github.com/jpfuentes2/go-env v0.0.0-20150316001728-8e0a68de05f2 // indirect
 	github.com/labstack/echo/v4 v4.11.4 // indirect
 	github.com/labstack/gommon v0.4.2 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
