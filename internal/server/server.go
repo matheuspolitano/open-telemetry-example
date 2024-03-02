@@ -14,15 +14,15 @@ type Server struct {
 	echo   *echo.Echo
 	logger logger.Logger
 	cfg    config.Config
-	svc    ServerServices
+	// svc    ServerServices
 }
 
-func NewServer(logger logger.Logger, cfg config.Config, svc ServerServices) *Server {
+func NewServer(logger logger.Logger, cfg config.Config) *Server {
 	return &Server{
 		echo:   echo.New(),
 		logger: logger,
 		cfg:    cfg,
-		svc:    svc,
+		// svc:    svc,
 	}
 }
 
