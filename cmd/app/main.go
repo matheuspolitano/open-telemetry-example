@@ -14,10 +14,13 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	appLogger := logger.NewApiLogger(cfg)
+	appLogger := logger.NewApiLogger(cfgFile)
 	cfg, err := config.ParseConfig(cfgFile)
 	if err != nil {
 		log.Fatal(err)
 	}
-	s := server.NewServer()
+	s := server.NewServer(appLogger, *cfg)
+	if err = s.Run(); err != nil {
+		log.Fatal(err)
+	}
 }
