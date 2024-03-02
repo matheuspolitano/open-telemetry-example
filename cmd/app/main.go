@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 
 	"github.com/matheuspolitano/open-telemetry-example/config"
@@ -12,7 +11,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	var conf config.Config
-	vconf.Unmarshal(&conf)
-	fmt.Println(conf)
+	conf, err := config.ParseConfig(vconf)
+	if err != nil {
+		log.Fatal(err)
+	}
 }

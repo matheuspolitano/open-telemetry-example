@@ -22,3 +22,13 @@ func LoadConfig(pathConfig string) (*viper.Viper, error) {
 	}
 	return vp, nil
 }
+
+func ParseConfig(viperConfig *viper.Viper) (*Config, error) {
+	var configParsed Config
+	err := viperConfig.Unmarshal(&configParsed)
+	if err != nil {
+		return nil, err
+	}
+	return &configParsed, nil
+
+}
