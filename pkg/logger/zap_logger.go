@@ -3,10 +3,9 @@ package logger
 import (
 	"os"
 
+	"github.com/matheuspolitano/open-telemetry-example/config"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
-
-	"github.com/AleksK1NG/api-mc/config"
 )
 
 // Logger methods interface

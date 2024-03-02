@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/google/logger"
 	"github.com/labstack/echo/v4"
 	"github.com/matheuspolitano/open-telemetry-example/config"
+	"github.com/matheuspolitano/open-telemetry-example/pkg/logger"
 )
 
 type Server struct {

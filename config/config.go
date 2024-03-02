@@ -10,10 +10,20 @@ type Server struct {
 	Port         string
 	ReadTimeout  time.Duration
 	WriteTimeout time.Duration
+	Mode         string
 }
 
 type Config struct {
 	Server Server
+	Logger LoggerConfig
+}
+
+type LoggerConfig struct { // Logger config
+	Development       bool
+	DisableCaller     bool
+	DisableStacktrace bool
+	Encoding          string
+	Level             string
 }
 
 func LoadConfig(pathConfig string) (*viper.Viper, error) {
