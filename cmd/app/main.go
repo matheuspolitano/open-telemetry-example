@@ -7,11 +7,11 @@ import (
 )
 
 func main() {
-	vconf, err := config.LoadConfig("./config/local-conf")
+	cfgFile, err := config.LoadConfig("./config/local-conf")
 	if err != nil {
 		log.Fatal(err)
 	}
-	conf, err := config.ParseConfig(vconf)
+	cfg, err := config.ParseConfig(cfgFile)
 	if err != nil {
 		log.Fatal(err)
 	}
